@@ -1,0 +1,200 @@
+.{
+	box-sizing: border-box;
+}
+
+:root{
+	height: 100%;
+}
+
+body{
+	background-color: #F1E9DA;
+	margin: 0px;
+	height: 100%;
+	
+	font-family: 'ABeeZee', sans-serif;
+	color: #2E294E;
+	font-size: 18px;
+	position:relative;
+}
+
+.full{
+	
+	height: 100vh !important;
+	height: 100%;
+}
+
+.center, .full{
+	max-width: 1200px;
+	min-width: 700px;
+	width: 80%;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.ramka{
+	width: 100%;
+	
+	border-color: #2E294E;
+	border-style: solid;
+	border-width: 3px;
+	padding: 20px;
+}
+
+.footer--center{
+	height: 250px;
+}
+
+footer{
+	
+	background-color: #2E294E;
+	color: #F1E9DA;
+}
+
+.foto{
+	width:50%;
+	height: 500px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.foto img{
+	object-fit: cover;
+	box-shadow: 0px 0px 8px 3px #2E294E44;
+}
+
+.commentCointener{
+	width:50%;
+	background-color: #F1E9DA;
+	border-width: 1px;
+	border-style: solid;
+	padding:30px;
+	position: relative;
+}
+
+.flex{
+	display: flex;
+	gap: 20px;
+}
+
+input, textarea{
+	padding:30px 20px;
+	width: calc(100% - 40px);
+	
+	border: none;
+	background-color: #F1E9DA;
+	border-color: #2E294E; 
+	border-width: 1px;
+	border-style: solid;
+	
+	font-family: 'ABeeZee', sans-serif;
+	color: #2E294E;
+	font-size: 18px;
+}
+
+
+.przycisk{
+	padding: 10px 60px;
+	background-color: #D90368;
+	color: #F1E9DA;
+	cursor: pointer;
+	position: relative;
+	letter-spacing: auto;
+	transition-duration: 0.6s;
+	font-size: 24px;
+	
+	display: flex;
+	align-items: center;
+}
+
+.przycisk:hover{
+	letter-spacing: 2px;
+	padding: 10px 70px;
+	 transition-duration: 0.3s;
+	 background-color: #F91378;
+}
+
+.margin{
+	margin-bottom: 20px;
+}
+
+.mainComment{
+	border-color: #2E294E;
+	border-width: 2px;
+	border-style: solid;
+	padding:20px;
+}
+
+.comments{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 350px;
+}
+
+.comment{
+	border-color: #2E294E;
+	border-width: 1px;
+	border-bottom-style: solid;
+	padding: 20px;
+	width: 100%;
+}
+
+.circle{
+	position: absolute;
+	top:0px;
+	left: -10px;
+	
+	border-radius: 50%;
+	object-fit: cover;
+	padding: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #F91378;
+	transition-duration: 0.4s;
+}
+
+.circle:hover{
+	top:-10px;
+	left: -25px;
+	padding: 13px;
+	border-width: 6px;
+	border-color: #F943A8;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+.user:hover{
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.createPost{
+	font-family: 'Great Vibes', cursive;
+	font-size: 72px;
+	text-align: center;
+	
+	padding:20px;
+	color: #D90368;
+}
+
+#superi{
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+a{
+    text-decoration:none;
+    color: #2E294E;
+}
+
+a:hover{
+    font-weight: 600;
+	cursor:pointer;
+}

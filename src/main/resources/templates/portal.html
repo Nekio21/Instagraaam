@@ -1,0 +1,70 @@
+<!DOCTYPE  >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Great+Vibes&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<link href="../css/main2.css" rel="stylesheet"/>
+</head>
+<body>
+
+	<header>
+		<div class="center changeFlex">
+			<div class="napis">Instagram 2.0</div>
+			<div class="f" id="f">
+				<a th:text="${name}" th:href="@{'/osoba/' + ${name}}"></a>
+				<img class="circle" th:src="@{${image}}" width="45px" height="45px" loading="lazy"/>
+			</div>
+		</div>
+	</header>
+
+
+	<div style="height: 200px;"></div>
+
+	<main>
+		<div class="center mainKolumn">
+		
+		<div class="post" th:each="list : ${lists}">
+			<img th:src="@{${list.url}}" alt="super zdj" width="450px" height="500px"/>
+			<div th:text="${list.opis}"></div>
+
+			<div class="left">
+				<img class="circle2" th:src="@{${list.user.urlImage}}" width="100px" height="100px" loading="lazy"/>
+				<a   th:href="@{'/osoba/' + ${list.user.login}}" th:text="${list.user.login}"></a>
+				<div class="kreska"></div>
+				<a th:href="@{'/osoba/' + ${list.user.login}}">Show profil</a>
+			</div>
+
+			<div class="right">
+				<div th:onclick="|post('${list.id}');|">
+					<span class="material-symbols-outlined">
+						chat
+					</span>
+					Napisz komentarz
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+	</main>
+	
+	
+	
+	<div style="height: 300px;"></div>
+
+	<footer>
+		<div class="center footer--center">
+			Intagram 2.0 - dziekujemy za skozystanie z naszej witryny :)
+		</div>
+	</footer>
+
+	<a class="dodaj" href="/add">+</a>
+	
+		<script src="../js/app.js"></script>
+</body>
+</html>

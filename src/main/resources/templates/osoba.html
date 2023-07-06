@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Great+Vibes&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<link href="../css/main2.css" rel="stylesheet"/>
+	
+</head>
+<body>
+
+	<header>
+		<div class="center changeFlex">
+			<div class="napis">Instagram 2.0</div>
+			<div class="f" id="f">
+				<a th:text="${user.login}" th:href="@{'/osoba/' + ${user.login}}"></a>
+				<img class="circle" th:src="@{${user.urlImage}}" width="45px" height="45px" loading="lazy"/>
+			</div>
+		</div>
+	</header>
+	
+	<div style="height: 150px;"></div>
+	
+	<div class="center mainKolumn osoba_header">
+		<img class="circle3" th:src="@{${osobaa.urlImage}}" width="150px" height="150px" loading="lazy"/>
+		<div class="opisSwoj--nazwa" th:text="${osobaa.login}"></div>
+		<div class="kreska"></div>
+		<div class="opisSwoj--caly" th:text="${osobaa.opis}"></div>
+		<div class="kreska"></div>
+	</div>
+	
+	
+	<div class="center">
+	
+		<div class="photos">
+			<img  th:each="p : ${post}" th:src="@{${p.url}}" class="photo" width="200px" height="250px" load="lazy"/>
+		</div>
+	
+	</div>
+	
+	
+
+	<div style="height: 300px;"></div>
+
+	<footer>
+		<div class="center footer--center">
+			Intagram 2.0 - dziekujemy za skozystanie z naszej witryny :)
+		</div>
+	</footer>
+	
+	<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Great+Vibes&display=swap" rel="stylesheet">
+
+	<link href="../css/main.css" rel="stylesheet"/>
+</head>
+<body>
+
+	<div class="full">
+		<div class="ramka">
+			<div class="napis">Instagram 2.0 - rejestracja</div>
+			<input class="margin" type="text" placeholder="Wpisz tutaj swoj login :)" id="login"/>
+			<input type="password" placeholder="Wpisz tutaj swoje haslo" id="pass"/>
+			<input class="margin" type="password" placeholder="Powtórz haslo" id="pass2"/>
+			
+			<!--<input  type="date" placeholder="Twoja data narodzin" id="urodziny"/> -->
+			<input  type="text" placeholder="url twojego zdjecia proflowego :)" id="urodziny"/>
+
+			<textarea placeholder="Napisz cos o sobie:)" id="opiss" class="op"></textarea>
+
+			<span th:if="${odpowiedz != ''}" th:text="${odpowiedz}" style="margin-top: 20px;"></span>
+
+			<div class="przycisk" onclick="wyslijDoBazy()">register</div>
+		</div>
+	</div>
+
+	<span class="freedom" onclick="wroc()">Wróc do logowania</span>
+
+	<script src="../js/register.js"></script>
+</body>
+</html>
